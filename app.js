@@ -18,6 +18,7 @@ var completedTasksHolder = document.getElementById("completed"); //completed-tas
 var createNewTaskElement = function(taskString) {
 
     var listItem = document.createElement("li");
+    listItem.className = "task-list__item";
 
     //input (checkbox)
     var checkBox = document.createElement("input"); //checkbx
@@ -33,18 +34,21 @@ var createNewTaskElement = function(taskString) {
     var deleteButtonImg = document.createElement("img"); //delete button image
 
     label.innerText = taskString;
-    label.className = 'task';
+    label.className = 'task-list__label';
 
     //Each elements, needs appending
     checkBox.type = "checkbox";
+    checkBox.className = "checkbox";
     editInput.type = "text";
-    editInput.className = "task";
+    editInput.className = "task task-list__input text-input";
 
     editButton.innerText = "Edit"; //innerText encodes special characters, HTML does not.
-    editButton.className = "edit";
+    editButton.className = "edit btn";
 
-    deleteButton.className = "delete";
+    deleteButton.className = "btn delete";
+    deleteButtonImg.className = "remove-img";
     deleteButtonImg.src = './remove.svg';
+
     deleteButton.appendChild(deleteButtonImg);
 
 
@@ -100,6 +104,8 @@ var editTask = function() {
 
     //toggle .editmode on the parent.
     listItem.classList.toggle("editMode");
+    label.classList.toggle("task-list__label_edit");
+    editInput.classList.toggle("task-list__input_edit");
 };
 
 
@@ -157,7 +163,7 @@ var bindTaskEvents = function(taskListItem, checkBoxEventHandler) {
     //select ListItems children
     var checkBox = taskListItem.querySelector("input[type=checkbox]");
     var editButton = taskListItem.querySelector("button.edit");
-    var deleteButton = taskListItem.querySelector("button.delete");
+    var deleteButton = taskListItem.querySelector(".delete");
 
 
     //Bind editTask to edit button.
