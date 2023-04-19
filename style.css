@@ -45,13 +45,13 @@ button {
 .main {
     display: block;
     width: 500px;
-    margin: 0 auto 0;
+    margin: 0 auto;
 }
 
 .task {
     width: 56%;
     display: inline-block;
-    flex-grow: 1
+    flex-grow: 1;
 }
 
 .task-row-wrapper {
@@ -142,7 +142,7 @@ button {
 }
 
 .task-list__input {
-    width: 226px
+    width: 226px;
 }
 
 .remove-img {
@@ -159,19 +159,20 @@ button {
 /* Completed */
 
 .task-list__label_completed {
-    text-decoration: line-through color: #888;
+    text-decoration: line-through;
+    color: #888;
 }
 
 
 /* Edit Task */
 
 .task-list__input {
-    display: none
+    display: none;
 }
 
 .task-list__input_edit {
     display: inline-block;
-    width: 224px
+    width: 224px;
 }
 
 .task-list__label_edit {
