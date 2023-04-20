@@ -49,7 +49,7 @@ button {
 }
 
 .task {
-    width: 56%;
+    /* width: 56%; */
     display: inline-block;
     flex-grow: 1;
 }
