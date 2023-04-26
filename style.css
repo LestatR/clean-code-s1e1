@@ -127,7 +127,7 @@ button {
     align-items: center;
 }
 
-.task_list__item>* {
+.task_list__item >* {
     vertical-align: middle;
 }
 
