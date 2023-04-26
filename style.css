@@ -37,9 +37,11 @@ button {
 }
 
 @media (max-width:768px) {
+
     .header {
         text-align: center;
     }
+    
 }
 
 .main {
@@ -49,7 +51,6 @@ button {
 }
 
 .task {
-    /* width: 56%; */
     display: inline-block;
     flex-grow: 1;
 }
